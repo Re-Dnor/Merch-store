@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "quotes": ["error", "double"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "max-len": ["error", { "code": 120, "ignoreComments": true  }],
+    "indent": ["error", 2],
+    "object-curly-spacing": ["warn", "always"],
+    "testing-library/no-unnecessary-act": "off"
+  }
+}
