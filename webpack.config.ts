@@ -14,6 +14,7 @@ type envType = {
 };
 
 export default (env: envType) => {
+  env.mode = env.mode || "development";
   const isDev = env.mode === "development";
 
   const config: Configuration = {
@@ -22,21 +23,25 @@ export default (env: envType) => {
     output: {
       filename: "[name].[contenthash].js",
       path: path.resolve(__dirname, "dist"),
+      publicPath: "/",
       clean: true,
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
+      preferAbsolute: true,
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
     },
     // Error trace
     devtool: isDev ? "inline-source-map" : false,
     devServer: {
       static: "./dist",
+      historyApiFallback: true,
       port: env.port || 3000,
       open: true,
       hot: true,
     },
     module: {
-      rules: getLoaders(),
+      rules: getLoaders(isDev),
     },
     plugins: getPlugins(),
   };

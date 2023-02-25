@@ -1,23 +1,37 @@
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-export const getLoaders = (): webpack.RuleSetRule[] => {
+export const getLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
+  const FileLoader = {
+    test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
   const TSLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
   };
 
+  const CSSLoader = {
+    test: /\.css$/,
+    use: ["style-loader", "css-loader"],
+    exclude: /\.module\.css$/,
+  };
+
   const SASSLoader = {
-    test: /\.s[ac]ss$/i,
+    test: /\.?s[ac]ss$/i,
     use: [
-      MiniCssExtractPlugin.loader,
+      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
       {
         loader: "css-loader",
         options: {
           modules: {
-            auto: (resourcePath: string) =>
-              /\.module\.s?css$/.test(resourcePath),
+            auto: (resourcePath: string) => resourcePath.includes(".module."),
           },
         },
       },
@@ -25,5 +39,5 @@ export const getLoaders = (): webpack.RuleSetRule[] => {
     ],
   };
 
-  return [TSLoader, SASSLoader];
+  return [FileLoader, TSLoader, CSSLoader, SASSLoader];
 };
