@@ -1,19 +1,33 @@
 {
   "compilerOptions": {
+    // В какую директорию:
     "outDir": "./dist/",
+    // Ругань на any:
     "noImplicitAny": true,
+    // Модульная система, которую будет использовать:
     "module": "esnext",
+    // Версия стандарта ES, в которую будет скомпилирован код:
     "target": "es5",
+    // Поддержка jsx:
     "jsx": "react-jsx",
+    // Портировать ваш JavaScript проект на TypeScript:
     "allowJs": true,
+    // Модульная система (classic - легаси):
     "moduleResolution": "node",
-    "esModuleInterop": true,
+    // Если подключаемая библиотека не имеет дефолтные импорты, то создает их:
     "allowSyntheticDefaultImports": true,
+    // Позволяет импортировать CommonJS пакеты как ES6 (идут в паре ↑):
+    "esModuleInterop": true,
+    // Строгий регистор у импортов:
+    "forceConsistentCasingInFileNames": true,
+    // Абсолютный путь
     "baseUrl": "./src",
+    // Можно задать его начало:
     "paths": {
       "*": ["*"]
     }
   },
+  // Для импортов
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
