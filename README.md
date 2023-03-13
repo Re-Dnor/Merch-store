@@ -9,6 +9,8 @@
 - [React-Router 6](https://reactrouter.com/en/main)
 - [Formik](https://formik.org/)
 - [Eslint](https://eslint.org/)
+- [Jest](https://jestjs.io/ru/)
+- [React testing library](https://testing-library.com/)
 - [UI kits](https://core-ds.github.io/core-components/master/?path=/story/intro--page)
 
 ### Feature-sliced Design
