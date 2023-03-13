@@ -1,0 +1,10 @@
+@import "./normalize.scss";
+@import "./fonts.scss";
+@import "./vars.scss";
+
+body {
+  font-family: 'Styrene UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01';
+}

@@ -1,0 +1,26 @@
+.groups {
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--content-height);
+  width: 100%;
+}
+
+.groups__title {
+  font-size: 45px;
+  margin-top: var(--gap-m);
+  }
+  
+.groups__subtitle {
+    font-size: var(--font-size-small);
+  }
+
+.wrapper {
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: var(--gap-2xl);
+}
+
+.group {
+  width: 100%;
+}

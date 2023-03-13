@@ -1,0 +1,27 @@
+.contact {
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--content-height);
+}
+
+.map {
+  box-shadow: var(--shadow-l-hard);
+}
+
+.map__content {
+  width: 40vw;
+  height: 40vh;
+}
+
+@media (max-width: 960px) {
+  .map__content {
+    width: 60vw;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .map {
+    display: none;
+  }
+}

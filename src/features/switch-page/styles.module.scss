@@ -1,0 +1,81 @@
+.home {
+  width: 100%;
+  height: var(--content-height);
+}
+
+.home__background {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 1px white;
+}
+
+.home__background_madeIn {
+  background: url(../../shared//images/made-in-alfa.jpg);
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-dark-bg-overlay);
+    opacity: 1;
+    transition: .8s;
+  }
+  &:hover::before {
+    opacity: 0;
+  }
+  &:hover .home__description {
+    box-shadow: inset 0 0 10px white;
+  }
+}
+
+.home__background_yourD {
+  background: url(../../shared//images/your-design.jpg);
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-dark-bg-overlay);
+    opacity: 1;
+    transition: .8s;
+  }
+  &:hover::before {
+    opacity: 0;
+  }
+  &:hover .home__description {
+    box-shadow: inset 0 0 10px white;
+  }
+}
+
+.home__description {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+  text-shadow: var(--shadow-s);
+  color: white;
+  height: 30px;
+  border: 1px solid white;
+  padding: 15px;
+  transition: .8s;
+}
+
+@media (max-width: 960px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .home__background {
+    width: 100%;
+  }
+
+  .home__description {
+    font-size: var(--font-size-medium);
+  }
+}

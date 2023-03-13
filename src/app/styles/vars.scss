@@ -1,0 +1,14 @@
+@import '@alfalab/core-components/vars/colors-indigo.css';
+@import '@alfalab/core-components/vars/gaps.css';
+@import '@alfalab/core-components/vars/shadows-indigo.css';
+
+:root {
+  --header-height: 7vh;
+  --footer-height: 7vh;
+  --content-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+
+  --font-size-mega-large: 45px;
+  --font-size-large: 25px;
+  --font-size-medium: 20px;
+  --font-size-small: 15px;
+}

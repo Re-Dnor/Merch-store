@@ -1,0 +1,26 @@
+.products {
+  align-items: center;
+  min-height: var(--content-height);
+  box-sizing: border-box;
+}
+
+.products__title {
+font-size: 45px;
+margin-top: var(--gap-m);
+color: gra
+}
+
+.products__subtitle {
+  font-size: var(--font-size-small);
+}
+
+.wrapper {
+  justify-content: flex-start;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}

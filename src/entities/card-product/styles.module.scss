@@ -1,0 +1,37 @@
+.item {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.img {
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  box-shadow: var(--shadow-m);
+  transition: .5s;
+  &:hover {
+    box-shadow: var(--shadow-xl-hard);
+  }
+}
+
+.title {
+  font-size: var(--font-size-medium);
+}
+
+.subtitle {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  color: var(--color-dark-text-disabled-inverted);
+}
+
+.price {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+}
+
+@media (max-width: 820px) {
+  .img {
+    width: 230px;
+    height: 320px;
+  }
+}
